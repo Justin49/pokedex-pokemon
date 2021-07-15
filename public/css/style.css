@@ -1,0 +1,75 @@
+body {
+
+    background-color: brown;
+}
+
+header, footer {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    color: brown;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+ul {
+
+    display: flex;
+}
+
+li {
+
+    list-style: none;
+    margin-right: 10px;
+    font-style: italic;
+    color: brown;
+    font-size: 18px;
+    
+}
+
+main {
+
+    width: 80%;
+    margin: auto;
+}
+
+.main-title {
+
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.card-pokemon {
+
+    border-color: black;
+    border-style: solid;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-right: 25px;
+    margin-left: 5px;
+    width: 150px;
+    display: inline-block;
+    background-color: white;
+}
+
+img {
+
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100px;
+    height: 130px;
+}
+
+.number, .name {
+
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display: flex;
+    font-size: 20px;
+    color: brown;
+}
