@@ -20,7 +20,7 @@ class PokemonModel
 
        $pdo = Database::getPDO(); 
 
-       $statement = $pdo->query($sql); 
+       $statement = $pdo->query($sql);
 
        $pokemons = $statement->fetchAll(PDO::FETCH_CLASS, 'PokemonModel');
 

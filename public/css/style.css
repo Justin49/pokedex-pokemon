@@ -1,6 +1,11 @@
+/* Style globaux */
 body {
 
     background-color: brown;
+}
+
+a {
+    text-decoration: none;
 }
 
 header, footer {
@@ -19,32 +24,36 @@ header, footer {
 ul {
 
     display: flex;
+    list-style: none;
 }
 
-li {
+li a {
 
     list-style: none;
     margin-right: 10px;
     font-style: italic;
     color: brown;
     font-size: 18px;
+    text-decoration: none;
     
 }
 
-main {
+/* Style spécifique */
+
+.main-home, .main-type {
 
     width: 80%;
     margin: auto;
 }
 
-.main-title {
+.main-title-home, .main-title-type {
 
     text-align: center;
     color: white;
     font-size: 2em;
 }
 
-.card-pokemon {
+.card-pokemon-home {
 
     border-color: black;
     border-style: solid;
@@ -57,6 +66,15 @@ main {
     background-color: white;
 }
 
+.card-colors-type {
+
+    border: none;
+    width: 200px;
+    height: 80px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
 img {
 
     margin-top: 10px;
@@ -65,11 +83,18 @@ img {
     height: 130px;
 }
 
-.number, .name {
+.number-home, .name-home {
 
     margin-bottom: 5px;
     margin-left: 10px;
     display: flex;
     font-size: 20px;
     color: brown;
+}
+
+.name-type {
+
+    margin: 10px;
+    color: white;
+    font-size: 20px;
 }

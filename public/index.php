@@ -1,24 +1,28 @@
 <?php 
-// On inclut l'autoloader pour pouvoir utiliser la classe autoloader
+// On inclut l'autoloader pour pouvoir utiliser la classe autoloader permettant de créer les routes du site
 require __DIR__.'/../vendor/autoload.php'; 
 
 // On inclut les controllers
 require_once __DIR__.'/../app/Controllers/MainController.php';
+require_once __DIR__.'/../app/Controllers/TypeController.php';
 
 // On inclut les bases de données
 require_once __DIR__.'/../app/utils/Database.php';
 
-// On inclut nos models
+// On inclut les models
+require_once __DIR__.'/../app/Models/TypeModel.php';
 require_once __DIR__.'/../app/Models/PokemonModel.php';
+
 
 // On instancie la classe AltoRouter
 $router = new AltoRouter();
 
-// On définis le chemin à partir du quel nos route sont prises en compte
-$router->setBasePath('var/www/html/projet-perso/pokedex-pokemon/public/');
+// On définis le chemin à partir du quel les route sont prises en compte
+$router->setBasePath('projet-perso/pokedex-pokemon/public/');
 
-// Nos différentes route
+// Les différentes route
 $router->map('GET', '/', 'MainController::home', 'home');
+$router->map('GET', '/type', 'TypeController::type', 'type');
 
 $match = $router->match();
 
@@ -45,9 +49,10 @@ if($match) {
 } else {
 
     // On instancie MainController 
-    $controller = new MainController();
+    $controller = new TypeController();
 
-    $controller->home();
+    $controller->type();
+
 
     // On appelle la méthode error404 
     //$controller->error404();
